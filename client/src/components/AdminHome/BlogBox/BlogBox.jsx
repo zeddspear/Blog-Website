@@ -76,7 +76,7 @@ const BlogBox = memo(({ blog, availableCategories, setBlogs, blogs }) => {
               Edit
             </button>
             <button
-              className="btn bg-primaryMain font-bold"
+              className="btn bg-tertiaryMain font-bold"
               onClick={deleteBlog}
             >
               Delete

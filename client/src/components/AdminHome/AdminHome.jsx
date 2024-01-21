@@ -71,10 +71,10 @@ function AdminHome() {
 
   return (
     <div className="bg-surface w-full flex flex-col items-center min-h-screen">
-      <p className="text-3xl text-secondaryMain font-bold mt-10 mb-5">Blogs</p>
+      <p className="text-3xl text-tertiaryMain font-bold mt-10 mb-5">Blogs</p>
       <button
         onClick={LogOut}
-        className="btn bg-primaryMain font-bold right-10 mt-12 absolute"
+        className="btn bg-tertiaryMain font-bold right-10 mt-12 absolute"
       >
         Log Out
       </button>

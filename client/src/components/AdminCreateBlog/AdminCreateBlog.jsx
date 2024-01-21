@@ -114,7 +114,7 @@ function AdminCreateBlog() {
         <form className=" bg-primaryMain rounded-lg shadow-lg max-w-[400px] w-full gap-5 p-5 flex flex-col justify-center">
           <label
             htmlFor="fileInput"
-            className="flex justify-center items-center gap-2 cursor-pointer"
+            className="flex text-secondaryMain justify-center items-center gap-2 cursor-pointer"
           >
             Add Image <FaImage size={20} />
           </label>
@@ -142,6 +142,7 @@ function AdminCreateBlog() {
             rows={8}
           ></textarea>
           <select
+            className="px-3"
             onChange={(e) => setBlog({ ...blog, category: e.target.value })}
           >
             {availableCategories.map((cat, idx) => {
@@ -153,7 +154,7 @@ function AdminCreateBlog() {
             })}
           </select>
           <button
-            className="btn bg-secondaryMain font-bold"
+            className="btn bg-tertiaryMain font-bold"
             type="submit"
             onClick={sendBlogToDB}
           >

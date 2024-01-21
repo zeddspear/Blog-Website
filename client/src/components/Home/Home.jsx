@@ -7,7 +7,7 @@ import Blogs from "./Blogs";
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
 
-  const { gdata, setGdata } = useContext(DataContext);
+  const { gdata } = useContext(DataContext);
 
   const selectCategory = (e) => {
     setSelectedCategory(e.currentTarget.innerText);
@@ -36,7 +36,7 @@ function Home() {
         </div>
         <div className="col-span-12 min-h-screen md:col-span-10 flex flex-col items-center bg-surface">
           <p className="text-3xl font-bold my-10 text-secondaryMain">Blogs</p>
-          <div className="flex justify-center flex-wrap gap-5">
+          <div className="flex justify-center flex-wrap mt-5 mb-24 gap-5">
             <Blogs selectedCategory={selectedCategory} />
           </div>
         </div>
