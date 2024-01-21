@@ -19,7 +19,13 @@ var commentRouter = require("./routes/comment");
 
 var app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://blog-website-ugjz.vercel.app/",
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 // connecting to mongodb using dot version
 mongoose
