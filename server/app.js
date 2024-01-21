@@ -33,6 +33,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/", (res, req, next) => {
+  res.send("Hello World!");
+});
+
 app.use("/admin", adminRouter);
 app.use("/categories", categoriesRouter);
 app.use("/upload", uploadRouter);
