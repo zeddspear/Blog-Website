@@ -10,12 +10,12 @@ dotenv.config();
 
 const DB_URI = process.env.DB_URI;
 
-var adminRouter = require("./routes/admin");
-var categoriesRouter = require("./routes/categories");
-var uploadRouter = require("./routes/fileupload");
-var createRouter = require("./routes/create");
-var blogsRouter = require("./routes/blogs");
-var commentRouter = require("./routes/comment");
+var adminRouter = require("../routes/admin");
+var categoriesRouter = require("../routes/categories");
+var uploadRouter = require("../routes/fileupload");
+var createRouter = require("../routes/create");
+var blogsRouter = require("../routes/blogs");
+var commentRouter = require("../routes/comment");
 
 var app = express();
 
