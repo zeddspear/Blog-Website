@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="h-screen bg-surface flex justify-center">
       <div className="flex flex-col items-center pt-32 px-10 max-w-[1000px] text-center">
-        <h3 className="text-2xl">Web-Developer 🖤</h3>
+        <h3 className="text-2xl text-secondaryMain">Web-Developer 🖤</h3>
         <p className="text-md my-3 text-gray-500 font-bold">
           Hi, I'm Zeeshan Ahmed. A passionate MERN stack Web-Developer based in
           Lahore, Pakistan. 🛕
