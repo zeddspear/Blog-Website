@@ -25,7 +25,7 @@ function Home() {
               return (
                 <li
                   key={idx}
-                  className="text-tertiaryMain font-bold hover:scale-105 transition cursor-pointer drop-shadow-xl"
+                  className="text-secondaryMain font-bold hover:scale-105 transition cursor-pointer drop-shadow-xl"
                   onClick={selectCategory}
                 >
                   {cat.name}

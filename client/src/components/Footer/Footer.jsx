@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-primaryMain h-10 flex justify-center items-center fixed bottom-0 w-full ">
+    <div className="bg-primaryMain text-secondaryMain h-10 flex justify-center items-center fixed bottom-0 w-full ">
       <p>Made by Zeddspear</p>
       <a
         className="ml-1 mt-[2px]"

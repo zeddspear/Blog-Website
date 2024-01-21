@@ -53,25 +53,25 @@ function BlogDetail() {
           src={blog.picture}
           alt={blog.title}
         />
-        <p className="text-[12px] text-gray-600">{blog.category}</p>
-        <p className="text-3xl text-secondaryMain my-3 font-bold">
+        <p className="text-[12px] text-gray-400">{blog.category}</p>
+        <p className="text-3xl text-tertiaryMain my-3 font-bold">
           {blog.title}
         </p>
-        <p className="text-[12px] text-gray-600">
+        <p className="text-[12px] text-gray-400">
           by <br /> {`${blog.admin?.firstname} ${blog.admin?.lastname}`} <br />
           {new Date(blog.date_posted).toDateString()}
         </p>
       </div>
       <div className="text-center sm:w-[80%] lg:w-[60%] p-3 mb-10">
-        <p className="text-xl text-secondaryMain font-bold mb-1">Description</p>
-        <p className="text-primaryMain description text-md">
+        <p className="text-xl text-tertiaryMain font-bold mb-1">Description</p>
+        <p className="text-secondaryMain description text-md">
           {blog.description}
         </p>
       </div>
       <div className="commentSection w-full border-t-2 border-primaryMain my-3 flex flex-col items-center ">
-        <p className="text-3xl text-secondaryMain my-2">Comments</p>
+        <p className="text-3xl text-tertiaryMain my-2">Comments</p>
         <textarea
-          className="border-b w-[300px]  md:w-[600px] outline-none px-2 py-1"
+          className="border-b w-[300px] bg-gray-400 rounded-md  md:w-[600px] outline-none px-2 py-1"
           id="blogComment"
           name="comment"
           placeholder="Comment Here"
