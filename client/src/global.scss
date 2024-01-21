@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+body {
+  font-family: "Lato";
+}
+
+.description {
+  font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+  font-family: "Agbalumo";
+}
+
+.btn {
+  border-radius: 2px;
+  @apply hover:scale-105 transition px-5 py-1;
+}
+
+textarea {
+  resize: none;
+}
+
+.transparentDiv {
+  background-color: rgba(0, 0, 0, 0.356);
+}
