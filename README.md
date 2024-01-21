@@ -13,13 +13,11 @@ For simple users just go to / route.
 For contribution follow the following commands for setting up
 
 Frontend:
-npm install
-npm run dev
+npm install && npm run dev
 
 it will run your client app on localhost
 
 Server:
-npm install
-npm run devstart
+npm install && npm run devstart
 
 make sure to install nodemon first as globally or dev-dep
