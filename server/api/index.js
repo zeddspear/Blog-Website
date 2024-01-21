@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (res, req, next) => {
-  res.send("Hello World!");
+  res.json("Hello World!");
 });
 
 app.use("/admin", adminRouter);
