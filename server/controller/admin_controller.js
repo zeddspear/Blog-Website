@@ -79,7 +79,7 @@ exports.post_admin_signin = [
           const accessToken = jwt.sign(
             admin.toJSON(),
             process.env.ACCESS_SECRET_KEY,
-            { expiresIn: "15m" }
+            { expiresIn: "60m" }
           );
 
           const refreshToken = jwt.sign(

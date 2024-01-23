@@ -19,11 +19,14 @@ const BlogBox = memo(({ blog, availableCategories, setBlogs, blogs }) => {
     setEditedBlog({ ...editedBlog, [e.target.name]: e.target.value });
   };
 
-  const postEditedBlog = async () => {
+  const postEditedBlog = async (e) => {
+    e.preventDefault();
     try {
-      const response = API.editBlog(editedBlog);
+      const response = await API.editBlog(editedBlog);
       if (response) {
         setIsEdit(false);
+        console.log(response.data);
+        setBlogs(response.data);
       }
     } catch (error) {
       if (error.isError) {
@@ -33,10 +36,12 @@ const BlogBox = memo(({ blog, availableCategories, setBlogs, blogs }) => {
   };
 
   const deleteBlog = async (e) => {
+    e.preventDefault();
     try {
       const response = await API.deleteBlog({ id: blog._id });
       if (response) {
         console.log(response.data);
+        setBlogs(response.data);
       }
     } catch (err) {
       if (err.isError) {

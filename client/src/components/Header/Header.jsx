@@ -114,7 +114,7 @@ const NavbarLinks = ({ link, linksbyprop }) => {
         to={toGo}
         className={({ isActive }) =>
           `lg:font-medium font-extrabold lg:border-0 pb-2 ${
-            isActive ? "text-secondaryMain" : "text-surface"
+            isActive ? "text-surface" : "text-gray-500"
           } pr-10 border-b border-b-interactiveMain border-opacity-10 hover:drop-shadow-xl lg:py-4 lg:px-2`
         }
       >

@@ -27,7 +27,13 @@ exports.get_single_blog = asyncHandler(async (req, res, next) => {
 exports.delete_blog = asyncHandler(async (req, res, next) => {
   try {
     const deletedBlog = await Blog.findByIdAndDelete(req.body.id);
-    return res.status(200).json({ msg: "Blog has been Deleted From DB." });
+
+    const blogs = await Blog.find({})
+      .populate("admin")
+      .populate({ path: "comments" })
+      .exec();
+
+    return res.status(200).json(blogs);
   } catch (error) {
     return res.status(500).json({ msg: error.message });
   }
@@ -45,7 +51,7 @@ exports.edit_blog = [
   asyncHandler(async (req, res, next) => {
     const errors = validationResult(req);
 
-    const oldBlog = await Blog.findById(req.body.id).exec();
+    let oldBlog = await Blog.findById(req.body.id).exec();
 
     if (!oldBlog) {
       return res.status(404).json({ msg: "Blog not found in DB!" });
@@ -55,7 +61,7 @@ exports.edit_blog = [
       res.status(500).json(errors.array());
     } else {
       try {
-        const blog = new Blog({
+        const editedBlog = new Blog({
           title: req.body.title,
           description: req.body.description,
           category: req.body.category,
@@ -66,8 +72,18 @@ exports.edit_blog = [
           _id: oldBlog._id,
         });
 
-        const result = await Blog.findByIdAndUpdate(req.body.id, blog, {});
-        return res.status(200).json({ msg: "Blog Updated successfully!" });
+        const result = await Blog.findByIdAndUpdate(
+          req.body.id,
+          editedBlog,
+          {}
+        );
+
+        const blogs = await Blog.find({})
+          .populate("admin")
+          .populate({ path: "comments" })
+          .exec();
+
+        return res.status(200).json(blogs);
       } catch (err) {
         return res.status(500).json({ msg: err.message });
       }
