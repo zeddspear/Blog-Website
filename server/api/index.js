@@ -22,10 +22,14 @@ var app = express();
 // connecting to mongodb using dot version
 mongoose
   .connect(DB_URI)
-  .then((res) => console.log("DB is connected succussfully."))
+  .then(() => console.log("DB is connected succussfully."))
   .catch((err) => console.log(`Error while connecting with the DB: ${err}`));
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 app.use(logger("dev"));
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
