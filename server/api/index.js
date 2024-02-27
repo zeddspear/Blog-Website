@@ -21,7 +21,7 @@ var app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://blog-website-53mq.onrender.com",
   })
 );
 
