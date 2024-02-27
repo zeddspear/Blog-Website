@@ -75,6 +75,7 @@ function BlogDetail() {
           id="blogComment"
           name="comment"
           placeholder="Comment Here"
+          value={comment}
           onChange={(e) => setComment(e.target.value)}
           rows={8}
         ></textarea>
