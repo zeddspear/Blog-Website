@@ -22,7 +22,7 @@ function Comment({ commentID }) {
   };
 
   return (
-    <div className="text-gray-400 text-sm w-[300px] md:w-[600px] border border-secondaryMain p-5 flex justify-between gap-2 my-3">
+    <div className="text-gray-400 text-sm w-[300px] md:w-[600px] border border-primaryMain p-5 flex justify-between gap-2 my-3">
       <p className="break-all w-[200px]">{comment.description}</p>
       <p className="break-all w-[200px] text-right">
         {new Date(comment.date_posted).toDateString()}

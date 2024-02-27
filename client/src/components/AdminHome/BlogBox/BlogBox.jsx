@@ -63,7 +63,7 @@ const BlogBox = memo(({ blog, availableCategories, setBlogs, blogs }) => {
             className="w-[260px] h-[200px]"
           />
           <div>
-            <p className="text-xl text-secondaryMain font-bold">{blog.title}</p>
+            <p className="text-xl text-primaryMain font-bold">{blog.title}</p>
             <p className="text-[12px] text-gray-500 mb-5 border-b border-primaryMain">
               {blog.category}
             </p>
@@ -75,13 +75,13 @@ const BlogBox = memo(({ blog, availableCategories, setBlogs, blogs }) => {
         {gdata?.adminID === blog.admin?._id ? (
           <div className="flex gap-2">
             <button
-              className="btn bg-secondaryMain font-bold"
+              className="btn bg-primaryMain font-bold"
               onClick={() => setIsEdit(!isEdit)}
             >
               Edit
             </button>
             <button
-              className="btn bg-tertiaryMain font-bold"
+              className="btn text-primaryMain bg-tertiaryMain font-bold"
               onClick={deleteBlog}
             >
               Delete

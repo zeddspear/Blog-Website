@@ -15,9 +15,6 @@ function Home() {
 
   return (
     <>
-      <div className="bg-tertiaryMain w-full h-40 flex justify-center items-center">
-        <h1 className="text-3xl text-secondaryMain logo">{selectedCategory}</h1>
-      </div>
       <div className="w-full grid grid-cols-12">
         <div className="col-span-12 md:col-span-2 p-10 bg-primaryMain">
           <ul className="flex flex-row md:flex-col gap-10 flex-wrap justify-center md:justify-start">
@@ -35,7 +32,9 @@ function Home() {
           </ul>
         </div>
         <div className="col-span-12 min-h-screen md:col-span-10 flex flex-col items-center bg-surface">
-          <p className="text-3xl font-bold my-10 text-secondaryMain">Blogs</p>
+          <p className="text-3xl font-bold my-10 text-primaryMain">
+            {selectedCategory}
+          </p>
           <div className="flex justify-center flex-wrap mt-5 mb-24 gap-5">
             <Blogs selectedCategory={selectedCategory} />
           </div>

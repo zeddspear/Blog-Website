@@ -139,7 +139,7 @@ function AuthSignInandUp() {
             </form>
             <p className="text-[12px] text-gray-500">OR</p>
             <button
-              className="my-3 btn  bg-tertiaryMain text-white"
+              className="my-3 btn  bg-tertiaryMain text-primaryMain"
               onClick={toggleSignInandSignUp}
             >
               Create an account

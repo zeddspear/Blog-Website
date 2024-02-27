@@ -8,7 +8,7 @@ function BlogBox({ ...blog }) {
       />
       <div className="p-2">
         <p className="text-[12px] text-gray-400">{blog.category}</p>
-        <p className="text-xl text-tertiaryMain font-bold">{blog.title}</p>
+        <p className="text-xl text-primaryMain font-bold">{blog.title}</p>
         <p className="text-[12px] text-gray-400">
           by {`${blog.admin.firstname} ${blog.admin.lastname}`}
         </p>

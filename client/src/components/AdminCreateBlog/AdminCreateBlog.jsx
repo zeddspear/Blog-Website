@@ -100,8 +100,8 @@ function AdminCreateBlog() {
       <div
         className={
           blog.picture !== ""
-            ? "bg-tertiaryMain bg-cover w-full h-60 flex justify-center items-center overflow-hidden"
-            : "bg-tertiaryMain w-full h-40 flex justify-center items-center overflow-hidden"
+            ? "bg-primaryMain bg-cover w-full h-60 flex justify-center items-center overflow-hidden"
+            : "bg-primaryMain w-full h-40 flex justify-center items-center overflow-hidden"
         }
       >
         {blog.picture !== "" ? (

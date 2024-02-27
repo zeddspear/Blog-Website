@@ -13,7 +13,7 @@ function ParticlesJS() {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    console.log(container);
   }, []);
 
   const options = {
@@ -47,7 +47,7 @@ function ParticlesJS() {
     },
     particles: {
       color: {
-        value: "#689775",
+        value: "#ce7b91",
       },
       links: {
         color: "#689775",

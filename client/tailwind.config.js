@@ -10,9 +10,9 @@ export default {
         "3xl": "0 45px 65px -12px rgba(0, 0, 0, 0.6)",
       },
       colors: {
-        primaryMain: "#383F51",
-        secondaryMain: "#A0B9C6",
-        tertiaryMain: "#096B72",
+        primaryMain: "#ce7b91",
+        secondaryMain: "#1A281F",
+        tertiaryMain: "#EBEBEB",
         lightBrownMain: "#917164",
         UlightBrownMain: "#AD8174",
         surface: "#141414",

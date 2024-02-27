@@ -70,15 +70,15 @@ function AdminHome() {
   };
 
   return (
-    <div className="bg-surface w-full flex flex-col items-center min-h-screen">
+    <div className="bg-surface w-full flex flex-col items-center">
       <p className="text-3xl text-tertiaryMain font-bold mt-10 mb-5">Blogs</p>
       <button
         onClick={LogOut}
-        className="btn bg-tertiaryMain font-bold right-10 mt-12 absolute"
+        className="btn bg-tertiaryMain text-primaryMain font-bold right-10 mt-12 absolute"
       >
         Log Out
       </button>
-      <div className="my-3 w-screen p-10 relative">
+      <div className="my-3 max-w-[1200px] w-full p-10 relative">
         {blogs.map((blog) => {
           return (
             <BlogBox
