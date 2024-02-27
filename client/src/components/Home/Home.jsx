@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { API } from "../../service/api";
+import { useState } from "react";
+
 import { useContext } from "react";
 import { DataContext } from "../../context/GlobalData";
 import Blogs from "./Blogs";

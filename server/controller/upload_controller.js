@@ -22,7 +22,7 @@ exports.post_file = asyncHandler(async (req, res, next) => {
     return res.status(404).json({ msg: "File not found" });
   }
 
-  const imageUrl = `${url}/upload/file/${req.file.filename}`;
+  const imageUrl = `${url}/api/upload/file/${req.file.filename}`;
 
   return res.status(200).json(imageUrl);
 });

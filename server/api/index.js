@@ -35,13 +35,17 @@ app.use(logger("dev"));
 app.use(express.json({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../../client/dist/")));
 
-app.use("/admin", adminRouter);
-app.use("/categories", categoriesRouter);
-app.use("/upload", uploadRouter);
-app.use("/create", createRouter);
-app.use("/blogs", blogsRouter);
-app.use("/comment", commentRouter);
+app.use("/api/admin", adminRouter);
+app.use("/api/categories", categoriesRouter);
+app.use("/api/upload", uploadRouter);
+app.use("/api/create", createRouter);
+app.use("/api/blogs", blogsRouter);
+app.use("/api/comment", commentRouter);
+
+app.get("*", async (req, res) => {
+  res.sendFile(path.join(__dirname, "../../client/dist/index.html"));
+});
 
 module.exports = app;
