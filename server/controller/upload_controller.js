@@ -2,7 +2,7 @@ const { response } = require("express");
 const asyncHandler = require("express-async-handler");
 const grid = require("gridfs-stream");
 const mongoose = require("mongoose");
-const url = "http://localhost:3000";
+const url = "https://blog-website-53mq.onrender.com";
 
 const conn = mongoose.connection;
 
