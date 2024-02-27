@@ -15,6 +15,7 @@ function BlogDetail() {
   }, []);
 
   const inputToComment = async (e) => {
+    e.preventDefault();
     try {
       const response = await API.postComment({
         description: comment,
@@ -23,7 +24,8 @@ function BlogDetail() {
       });
 
       if (response.isSuccess) {
-        location.reload();
+        getBlogDetailFromDB();
+        setComment("");
       }
     } catch (error) {
       if (error.isError) {
