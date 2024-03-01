@@ -3,6 +3,7 @@ import { API } from "../../service/api";
 import { useContext } from "react";
 import { DataContext } from "../../context/GlobalData";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function AuthSignInandUp() {
   const [isLogIn, setIsLogIn] = useState(true);
@@ -95,8 +96,14 @@ function AuthSignInandUp() {
   };
 
   return (
-    <>
-      <div className="container rounded-xl px-5 py-8 sm:w-1/2 md:w-1/3 lg:w-1/4 mt-32 shadow-md relative z-20 bg-primaryMain">
+    <div className="max-h-[100vh] h-full flex flex-col justify-center items-center">
+      <Link
+        to={"/"}
+        className="bg-tertiaryMain relative z-30 my-3 text-primaryMain btn"
+      >
+        Back To Home
+      </Link>
+      <div className="container rounded-xl px-5 py-8 sm:w-1/2 md:w-1/3 lg:w-1/4 mt-24 shadow-md relative z-20 bg-primaryMain">
         <h1 className="logo text-5xl text-tertiaryMain text-center mt-2 mb-14">
           BlogHub
         </h1>
@@ -208,7 +215,7 @@ function AuthSignInandUp() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

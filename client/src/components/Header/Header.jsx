@@ -2,8 +2,13 @@ import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
+import { getAccessToken } from "../../utils/common-utils";
 
 function Navbar({ linksbyprop }) {
+  const accessToken = getAccessToken();
+
+  console.log("Access Token: " + accessToken);
+
   // Menu Open or Close state
   const [isMenu, setIsMenu] = useState(false);
 
@@ -59,7 +64,7 @@ function Navbar({ linksbyprop }) {
           className={
             !isMenu
               ? "navbarLinksContainer lg:static bg-primaryMain lg:block xl:w-7/12 fixed top-0 left-[-100%] ease-in-out h-full duration-500"
-              : "navbarLinksContainer lg:static lg:bg-primaryMain fixed bg-secondaryMain top-0 left-0 w-[80%] h-screen border-r border-r-interactiveMain border-opacity-10 lg:border-opacity-0 ease-in-out duration-500 p-3 rounded-md"
+              : "navbarLinksContainer lg:static lg:bg-primaryMain fixed bg-primaryMain top-0 left-0 w-[80%] h-screen border-r border-r-interactiveMain border-opacity-10 lg:border-opacity-0 ease-in-out duration-500 p-3 rounded-md"
           }
         >
           {isMenu ? (
@@ -76,6 +81,15 @@ function Navbar({ linksbyprop }) {
           ) : undefined}
 
           <ul className="navbarLinks flex px-5 lg:px-0 flex-col gap-8 lg:gap-8 lg:flex-row lg:items-center lg:justify-evenly">
+            {accessToken === null && (
+              <Link
+                className=" bg-surface btn py-1 px-2 text-tertiaryMain"
+                to={"/admin/auth"}
+              >
+                Login As Admin
+              </Link>
+            )}
+
             {links.map((text, idx) => {
               return (
                 <NavbarLinks key={idx} link={text} linksbyprop={linksbyprop} />
